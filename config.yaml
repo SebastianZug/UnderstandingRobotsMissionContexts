@@ -1,0 +1,56 @@
+data_folder : "../data/"
+
+#raw_data_folder : "raw/"
+#raw_data_folder : "raw/20231210/"
+#preprocessed_data_folder : "preprocessed/20231210/"
+#raw_data_folder : "raw/20231206/"
+#preprocessed_data_folder : "preprocessed/20231206/"
+#raw_data_folder : "raw/20230628/"
+#preprocessed_data_folder : "preprocessed/20230628/"
+raw_data_folder : "raw/20230524/"
+preprocessed_data_folder : "preprocessed/20230524/"
+
+raw_file_labels : "raw_"
+preprocessed_file_labels : "pp_"
+
+zed_parameter:
+  camera_min_angle: 46
+  camera_max_angle: 134
+  cameras:
+  - frame: 'front'
+    delta_x : 0
+    delta_y : 0.45
+    delta_angle : 0
+    local_camera_min_angle :  15.473704
+    local_camera_max_angle : 135.455505
+    offset: 10000
+
+  - frame: 'rear'
+    delta_x : 0
+    delta_y : -0.45
+    delta_angle : 180
+    local_camera_min_angle :  37.720168
+    local_camera_max_angle : 138.377089
+    offset: 40000
+
+  - frame: 'left'
+    delta_x : -0.28
+    delta_y : 0
+    delta_angle : 90
+    local_camera_min_angle :   2.663306
+    local_camera_max_angle : 168.629909
+    offset: 20000
+
+  - frame: 'right'
+    delta_x : 0.28
+    delta_y : 0
+    delta_angle : 270
+    local_camera_min_angle :  16.700992
+    local_camera_max_angle : 141.040867
+    offset: 30000
+
+# Extracted by 12_determine_view_range_zed.ipynb
+# front	15.473704	135.455505
+# left	2.663306	168.629909
+# rear	37.720168	138.377089
+# right	16.700992	141.040867
